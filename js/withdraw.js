@@ -16,7 +16,7 @@ document.getElementById('withdraw-btn').addEventListener("click", function() {
     const currentBalance = parseFloat(currentBalanceElement.innerText);
     const totalBalance = currentBalance - withdrawAmount;
     if (totalBalance < 0) {
-        alert('Insuffecent Amount !! Please check Balance');
+        alert('insufficient balance!! Please check your Balance . ');
     } else {
         const totalWithdrawAmount = withdrawAmount + currentWithdrawAmount;
         currentWithdrawElement.innerText = totalWithdrawAmount;

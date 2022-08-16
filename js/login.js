@@ -10,7 +10,7 @@ document.getElementById('submit-btn').addEventListener("click", function() {
 
     } else {
 
-        alert("Invalid Emai Or Passord");
+        alert("Invalid Email Or Password");
 
     }
 })
