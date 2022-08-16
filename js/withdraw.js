@@ -6,14 +6,23 @@ document.getElementById('withdraw-btn').addEventListener("click", function() {
     const currentWithdrawElement = document.getElementById('current-withdraw');
     const currentWithdrawAmount = parseFloat(currentWithdrawElement.innerText);
 
-    const totalWithdrawAmount = withdrawAmount + currentWithdrawAmount;
-    currentWithdrawElement.innerText = totalWithdrawAmount;
+    // const totalWithdrawAmount = withdrawAmount + currentWithdrawAmount;
+    // currentWithdrawElement.innerText = totalWithdrawAmount;
+
+
 
 
     const currentBalanceElement = document.getElementById('current-balance');
     const currentBalance = parseFloat(currentBalanceElement.innerText);
     const totalBalance = currentBalance - withdrawAmount;
-    currentBalanceElement.innerText = totalBalance;
+    if (totalBalance < 0) {
+        alert('Insuffecent Amount !! Please check Balance');
+    } else {
+        const totalWithdrawAmount = withdrawAmount + currentWithdrawAmount;
+        currentWithdrawElement.innerText = totalWithdrawAmount;
+        currentBalanceElement.innerText = totalBalance;
+    }
+
 
     // // Clear The withdraw Field
     withdrawField.value = '';
